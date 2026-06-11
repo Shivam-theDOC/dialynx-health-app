@@ -1,0 +1,130 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-heading: var(--font-sora), 'Geist Fallback';
+  --font-sans: var(--font-geist-sans), 'Geist Fallback';
+  --font-mono: var(--font-geist-mono), 'Geist Mono Fallback';
+
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+
+  --color-surface: var(--surface);
+  --color-surface-foreground: var(--surface-foreground);
+  --color-glass: var(--glass);
+  --color-warning: var(--warning);
+  --color-success: var(--success);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  /* Brand: Dialynx Health - premium dark indigo + teal */
+  --background: #100744; /* Dark Indigo */
+  --foreground: #ffffff;
+
+  --card: #ffffff; /* White Cards */
+  --card-foreground: #100744;
+
+  --popover: #1a0f5c;
+  --popover-foreground: #ffffff;
+
+  --primary: #31edae; /* Soft Teal */
+  --primary-foreground: #06231a;
+
+  --secondary: #1c1259;
+  --secondary-foreground: #d7d7e8;
+
+  --muted: #1c1259;
+  --muted-foreground: #7a7aa3; /* Muted Text */
+
+  --accent: #31edae;
+  --accent-foreground: #06231a;
+
+  --destructive: #ff6b8a;
+  --warning: #ffc56b;
+  --success: #31edae;
+
+  --border: rgba(215, 215, 232, 0.1);
+  --input: rgba(215, 215, 232, 0.12);
+  --ring: #31edae;
+
+  /* Elevated glass surface on the dark indigo background */
+  --surface: rgba(255, 255, 255, 0.06);
+  --surface-foreground: #d7d7e8;
+  --glass: rgba(255, 255, 255, 0.08);
+
+  --chart-1: #31edae;
+  --chart-2: #6be0ff;
+  --chart-3: #d7d7e8;
+  --chart-4: #7a7aa3;
+  --chart-5: #ffc56b;
+
+  --radius: 0.75rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    background: var(--glass);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
