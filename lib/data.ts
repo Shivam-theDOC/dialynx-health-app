@@ -142,8 +142,51 @@ export const healthRecords = {
 }
 
 export const chatMessages = [
-  { from: 'them' as const, text: 'Hi Aarav, this is Sneha — your dedicated care coordinator. How are you feeling today?', time: '9:24 AM' },
+  { from: 'them' as const, text: 'Hi Shivam, this is Sneha — your dedicated care coordinator. How are you feeling today?', time: '9:24 AM' },
   { from: 'me' as const, text: 'Hi Sneha, a bit nervous about the angioplasty next week.', time: '9:26 AM' },
   { from: 'them' as const, text: 'Completely understandable. The good news is your cashless pre-authorization is already approved and Dr. Mehta has a 97% success rate.', time: '9:27 AM' },
   { from: 'them' as const, text: 'I have blocked Room 412 for you and arranged transport for admission day. Shall I share the pre-op checklist?', time: '9:27 AM' },
+]
+
+export const notifications = [
+  {
+    id: 1,
+    type: 'appointment' as const,
+    title: 'Appointment reminder',
+    detail: 'Video consult with Dr. Arjun Mehta starts at 4:30 PM today.',
+    time: '2h ago',
+    unread: true,
+  },
+  {
+    id: 2,
+    type: 'insurance' as const,
+    title: 'Cashless pre-auth approved',
+    detail: 'Star Health approved ₹2,40,000 for your angioplasty at Fortis.',
+    time: '5h ago',
+    unread: true,
+  },
+  {
+    id: 3,
+    type: 'report' as const,
+    title: 'Lab report ready',
+    detail: 'Your Lipid Profile report from Thyrocare is now available.',
+    time: 'Yesterday',
+    unread: true,
+  },
+  {
+    id: 4,
+    type: 'chat' as const,
+    title: 'Message from Sneha',
+    detail: 'I have shared your pre-op checklist. Please review before admission.',
+    time: 'Yesterday',
+    unread: false,
+  },
+  {
+    id: 5,
+    type: 'payment' as const,
+    title: 'EMI option available',
+    detail: 'You are eligible for 0% EMI on your surgery estimate of ₹3,85,000.',
+    time: '2 days ago',
+    unread: false,
+  },
 ]

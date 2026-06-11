@@ -1,7 +1,9 @@
 'use client'
 
+import { useState } from 'react'
 import type { Screen } from '@/lib/data'
 import { ScreenScroll } from '@/components/screen-header'
+import { NotificationsPanel } from '@/components/notifications-panel'
 import Image from 'next/image'
 import {
   ShieldCheck,
@@ -23,6 +25,8 @@ const quickActions = [
 ]
 
 export function DashboardScreen({ onNavigate }: { onNavigate: (s: Screen) => void }) {
+  const [showNotifications, setShowNotifications] = useState(false)
+
   return (
     <ScreenScroll>
       {/* greeting */}
@@ -30,7 +34,7 @@ export function DashboardScreen({ onNavigate }: { onNavigate: (s: Screen) => voi
         <div className="flex items-center gap-3">
           <Image
             src="/user-avatar.png"
-            alt="Aarav Sharma"
+            alt="Shivam Singh"
             width={48}
             height={48}
             className="size-12 rounded-full object-cover ring-2 ring-primary/30"
@@ -38,11 +42,12 @@ export function DashboardScreen({ onNavigate }: { onNavigate: (s: Screen) => voi
           <div>
             <p className="text-[13px] text-muted-foreground">Good morning</p>
             <p className="font-heading text-lg font-semibold leading-tight text-foreground">
-              Aarav Sharma
+              Shivam Singh
             </p>
           </div>
         </div>
         <button
+          onClick={() => setShowNotifications(true)}
           aria-label="Notifications"
           className="relative flex size-11 items-center justify-center rounded-full glass-card text-foreground"
         >
@@ -184,6 +189,10 @@ export function DashboardScreen({ onNavigate }: { onNavigate: (s: Screen) => voi
           </span>
         </button>
       </div>
+
+      {showNotifications && (
+        <NotificationsPanel onClose={() => setShowNotifications(false)} />
+      )}
     </ScreenScroll>
   )
 }
