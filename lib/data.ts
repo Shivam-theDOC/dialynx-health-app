@@ -11,7 +11,7 @@ export type Screen =
 
 export const doctors = [
   {
-    id: 'arjun-mehta',
+    id: 'raj-kumar',
     name: 'Dr. Raj Kumar',
     specialty: 'Interventional Cardiologist',
     hospital: 'Fortis Heart Institute',
