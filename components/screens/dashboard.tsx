@@ -91,14 +91,14 @@ export function DashboardScreen({ onNavigate }: { onNavigate: (s: Screen) => voi
           </div>
           <div className="flex items-center gap-3">
             <Image
-              src="/doctors/doctor-1.png"
-              alt="Dr. Arjun Mehta"
+              src="/doctors/WhatsApp Image 2026-06-12 at 05.47.13.jpeg"
+              alt="Dr. Raj Kumar"
               width={52}
               height={52}
               className="size-13 h-[52px] w-[52px] rounded-2xl object-cover"
             />
             <div className="min-w-0 flex-1">
-              <p className="truncate font-medium text-foreground">Dr. Arjun Mehta</p>
+              <p className="truncate font-medium text-foreground">Dr. Raj Kumar</p>
               <p className="truncate text-[12px] text-muted-foreground">
                 Interventional Cardiologist
               </p>
