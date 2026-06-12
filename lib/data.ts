@@ -12,10 +12,10 @@ export type Screen =
 export const doctors = [
   {
     id: 'arjun-mehta',
-    name: 'Dr. Arjun Mehta',
+    name: 'Dr. Raj Kumar',
     specialty: 'Interventional Cardiologist',
     hospital: 'Fortis Heart Institute',
-    image: '/doctors/doctor-1.png',
+    image: '/doctors/WhatsApp Image 2026-06-12 at 05.47.13.jpeg',
     rating: 4.9,
     reviews: 1284,
     fee: 1200,
